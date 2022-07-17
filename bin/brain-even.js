@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-import '../src/even.js';
+import '../src/games/even.js';
