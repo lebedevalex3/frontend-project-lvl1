@@ -11,10 +11,8 @@ const play = (mainQuestion, correctAnswer, expression) => {
   console.log(mainQuestion); // Уникальный главный вопрос в каждой игре
   while (i < gameMoves) {
     const [numExp, strExp] = expression(); // Получение выражения вопроса в числовом и строковом формате (5 или '2+3')
-
-    const correct = String(correctAnswer(numExp)); 
+    const correct = String(correctAnswer(numExp));
     console.log(`Question: ${strExp}`);
-
     const answer = readlineSync.question('Your answer: ');
 
     if (answer === correct) {
