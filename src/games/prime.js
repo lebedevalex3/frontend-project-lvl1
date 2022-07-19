@@ -1,29 +1,33 @@
-import getRandomInt from '../getRandomInt.js';
+import { getRandomIntMinMax } from '../getRandomInt.js';
 import play from '../index.js';
 
+const MAINQUESTION =
+  'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const YES = 'yes';
+const NO = 'no';
+
 const isPrime = (num) => {
+  if (num === 1) return false;
   let i = 2;
-  while (i < Math.ceil(Math.sqrt(num))) {
+  while (i <= Math.ceil(num / 2)) {
     if (num % i === 0) return false;
     i += 1;
   }
   return true;
 };
-
-const expression = () => {
-  const randomInt = getRandomInt(16) + 2;
-  const arr = [];
-  arr[0] = randomInt;
-  arr[1] = String(randomInt);
-  return arr;
+const getCorrectAnswer = (num) => {
+  if (isPrime(num)) return YES;
+  return NO;
 };
 
-const correctAnswer = (exp) => {
-  if (isPrime(exp)) return 'yes';
-  return 'no';
+const getExpression = () => {
+  const randomInt = getRandomIntMinMax(1, 16);
+  const resultArr = [];
+  resultArr.push(getCorrectAnswer(randomInt));
+  resultArr.push(String(randomInt));
+
+  return resultArr;
 };
 
-const mainQuestion =
-  'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-play(mainQuestion, correctAnswer, expression);
+play(MAINQUESTION, getExpression);

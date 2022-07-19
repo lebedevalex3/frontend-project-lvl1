@@ -1,21 +1,21 @@
 import getRandomInt from '../getRandomInt.js';
 import play from '../index.js';
 
-const expression = () => {
-  const randomInt = getRandomInt(100);
-  const arr = [];
-  arr[0] = randomInt;
-  arr[1] = String(randomInt);
-  return arr;
-};
+const MAINQUESTION =
+  'Answer "yes" if the number is even, otherwise answer "no".';
 
-const correctAnswer = (exp) => {
-  const remainder = exp % 2;
-  if (remainder === 0) return 'yes';
+const getCorrectAnswer = (num) => {
+  if (num % 2 === 0) return 'yes';
   return 'no';
 };
 
-const mainQuestion =
-  'Answer "yes" if the number is even, otherwise answer "no".';
+const getExpression = () => {
+  const randomInt = getRandomInt(100);
+  const resultArr = [];
+  resultArr.push(getCorrectAnswer(randomInt));
+  resultArr.push(String(randomInt));
 
-play(mainQuestion, correctAnswer, expression);
+  return resultArr;
+};
+
+play(MAINQUESTION, getExpression);

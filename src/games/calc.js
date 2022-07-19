@@ -1,9 +1,10 @@
 import getRandomInt from '../getRandomInt.js';
 import play from '../index.js';
 
+const MAINQUESTION = 'What is the result of the expression?';
 const arrOperations = ['+', '-', '*'];
 
-const expression = () => {
+const getExpression = () => {
   const num1 = getRandomInt(20);
   const num2 = getRandomInt(20);
   let stringExpression = null;
@@ -16,16 +17,16 @@ const expression = () => {
   switch (operation) {
     case '+':
       numberExpression = num1 + num2;
-      stringExpression = `${num1}+${num2}`;
+      stringExpression = `${num1} + ${num2}`;
       break;
     case '-':
       numberExpression = num1 - num2;
-      stringExpression = `${num1}-${num2}`;
+      stringExpression = `${num1} - ${num2}`;
 
       break;
     case '*':
       numberExpression = num1 * num2;
-      stringExpression = `${num1}*${num2}`;
+      stringExpression = `${num1} * ${num2}`;
       break;
 
     default:
@@ -33,12 +34,7 @@ const expression = () => {
   index = arrOperations.indexOf(operation);
   arrOperations.splice(index, 1);
 
-  const arrResult = [numberExpression, stringExpression];
-  return arrResult;
+  return [numberExpression, stringExpression];
 };
 
-const correctAnswer = (exp) => Number(exp);
-
-const mainQuestion = 'What is the result of the expression?';
-
-play(mainQuestion, correctAnswer, expression);
+play(MAINQUESTION, getExpression);
