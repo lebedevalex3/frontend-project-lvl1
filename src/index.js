@@ -10,7 +10,7 @@ const play = (MAINQUESTION, getExpression) => {
   let i = 0;
   console.log(MAINQUESTION); // Уникальный главный вопрос в каждой игре
   while (i < gameMoves) {
-    const [correctAnswer, strExp] = getExpression(); // Получение выражения вопроса в числовом и строковом формате (5 или '2+3')
+    const [correctAnswer, strExp] = getExpression();
 
     console.log(`Question: ${strExp}`);
     const answer = readlineSync.question('Your answer: ');
@@ -19,9 +19,7 @@ const play = (MAINQUESTION, getExpression) => {
       console.log('Correct!');
       i += 1;
     } else {
-      console.log(
-        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`
-      );
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }

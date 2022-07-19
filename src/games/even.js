@@ -1,8 +1,7 @@
 import getRandomInt from '../getRandomInt.js';
 import play from '../index.js';
 
-const MAINQUESTION =
-  'Answer "yes" if the number is even, otherwise answer "no".';
+const MAINQUESTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getCorrectAnswer = (num) => {
   if (num % 2 === 0) return 'yes';

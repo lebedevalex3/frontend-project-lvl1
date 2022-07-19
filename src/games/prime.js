@@ -1,8 +1,7 @@
 import { getRandomIntMinMax } from '../getRandomInt.js';
 import play from '../index.js';
 
-const MAINQUESTION =
-  'Answer "yes" if given number is prime. Otherwise answer "no".';
+const MAINQUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const YES = 'yes';
 const NO = 'no';
