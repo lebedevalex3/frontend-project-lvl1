@@ -11,8 +11,8 @@ const gcd = (x, y) => {
 };
 
 const getExpression = () => {
-  const num1 = getRandomInt(40) + 1;
-  const num2 = getRandomInt(40) + 1;
+  const num1 = getRandomInt(50) + 1; // +1 на случай появления нуля
+  const num2 = getRandomInt(50) + 1;
   const gcdNumber = gcd(num1, num2);
 
   const arrResult = [gcdNumber, `${num1} ${num2}`];

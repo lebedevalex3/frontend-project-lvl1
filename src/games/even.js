@@ -3,9 +3,12 @@ import play from '../index.js';
 
 const MAINQUESTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getCorrectAnswer = (num) => {
-  if (num % 2 === 0) return 'yes';
-  return 'no';
+const YES = 'yes';
+const NO = 'no';
+
+const getCorrectAnswer = (number) => {
+  if (number % 2 === 0) return YES;
+  return NO;
 };
 
 const getExpression = () => {
