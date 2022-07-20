@@ -2,15 +2,13 @@ import getRandomInt from '../getRandomInt.js';
 import play from '../index.js';
 
 const MAINQUESTION = 'What is the result of the expression?';
-const arrOperations = ['+', '-', '*'];
 
 const getExpression = () => {
   const num1 = getRandomInt(20);
   const num2 = getRandomInt(20);
   let stringExpression = null;
   let numberExpression = null;
-  let index = null;
-
+  const arrOperations = ['+', '-', '*'];
   const random = Math.floor(Math.random() * arrOperations.length);
   const operation = arrOperations[random];
 
@@ -31,8 +29,6 @@ const getExpression = () => {
 
     default:
   }
-  index = arrOperations.indexOf(operation);
-  arrOperations.splice(index, 1);
 
   return [numberExpression, stringExpression];
 };
