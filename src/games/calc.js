@@ -3,34 +3,41 @@ import play from '../index.js';
 
 const MAINQUESTION = 'What is the result of the expression?';
 
-const getExpression = () => {
-  const num1 = getRandomInt(20);
-  const num2 = getRandomInt(20);
-  let stringExpression = null;
-  let numberExpression = null;
-  const arrOperations = ['+', '-', '*'];
-  const random = Math.floor(Math.random() * arrOperations.length);
-  const operation = arrOperations[random];
-
+const calcCorrectAnswer = (operation, num1, num2) => {
   switch (operation) {
     case '+':
-      numberExpression = num1 + num2;
-      stringExpression = `${num1} + ${num2}`;
-      break;
+      return num1 + num2;
     case '-':
-      numberExpression = num1 - num2;
-      stringExpression = `${num1} - ${num2}`;
-
-      break;
+      return num1 - num2;
     case '*':
-      numberExpression = num1 * num2;
-      stringExpression = `${num1} * ${num2}`;
-      break;
-
+      return num1 * num2;
     default:
+      return null;
   }
-
-  return [numberExpression, stringExpression];
 };
 
-play(MAINQUESTION, getExpression);
+const calcDataToPrint = (operation, num1, num2) => {
+  switch (operation) {
+    case '+':
+      return `${num1} + ${num2}`;
+    case '-':
+      return `${num1} - ${num2}`;
+    case '*':
+      return `${num1} * ${num2}`;
+    default:
+      return null;
+  }
+};
+
+const getGameData = () => {
+  const num1 = getRandomInt(20);
+  const num2 = getRandomInt(20);
+  const arrOperations = ['+', '-', '*'];
+  const random = getRandomInt(arrOperations.length);
+  const operation = arrOperations[random];
+  const options = [operation, num1, num2];
+
+  return [calcCorrectAnswer(...options), calcDataToPrint(...options)];
+};
+
+export default () => play(MAINQUESTION, getGameData);

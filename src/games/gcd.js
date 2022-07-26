@@ -10,14 +10,14 @@ const gcd = (x, y) => {
   return gcd(y, x % y);
 };
 
-const getExpression = () => {
+const getGameData = () => {
   const num1 = getRandomInt(50) + 1; // +1 на случай появления нуля
   const num2 = getRandomInt(50) + 1;
   const gcdNumber = gcd(num1, num2);
 
-  const arrResult = [gcdNumber, `${num1} ${num2}`];
+  const results = [gcdNumber, `${num1} ${num2}`];
 
-  return arrResult;
+  return results;
 };
 
-play(MAINQUESTION, getExpression);
+export default () => play(MAINQUESTION, getGameData);

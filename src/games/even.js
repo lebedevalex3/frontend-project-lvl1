@@ -6,18 +6,18 @@ const MAINQUESTION = 'Answer "yes" if the number is even, otherwise answer "no".
 const YES = 'yes';
 const NO = 'no';
 
+const isEven = (number) => number % 2 === 0;
+
 const getCorrectAnswer = (number) => {
-  if (number % 2 === 0) return YES;
+  if (isEven(number)) return YES;
   return NO;
 };
 
-const getExpression = () => {
-  const randomInt = getRandomInt(100);
-  const resultArr = [];
-  resultArr.push(getCorrectAnswer(randomInt));
-  resultArr.push(String(randomInt));
+const getGameData = () => {
+  const randomNumber = getRandomInt(100);
+  const results = [getCorrectAnswer(randomNumber), String(randomNumber)];
 
-  return resultArr;
+  return results;
 };
 
-play(MAINQUESTION, getExpression);
+export default () => play(MAINQUESTION, getGameData);

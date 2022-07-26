@@ -7,8 +7,8 @@ const YES = 'yes';
 const NO = 'no';
 
 const isPrime = (number) => {
-  if (number === 1) return false; // 1 -не является простым числом
-  let i = 2; // Проверяем остатки при делении чисел больших единицы
+  if (number <= 1) return false;
+  let i = 2;
   while (i <= Math.ceil(number / 2)) {
     if (number % i === 0) return false;
     i += 1;
@@ -20,13 +20,13 @@ const getCorrectAnswer = (number) => {
   return NO;
 };
 
-const getExpression = () => {
+const getGameData = () => {
   const randomInt = getRandomIntMinMax(1, 100);
-  const resultArray = [];
-  resultArray.push(getCorrectAnswer(randomInt));
-  resultArray.push(String(randomInt));
+  const results = [];
+  results.push(getCorrectAnswer(randomInt));
+  results.push(String(randomInt));
 
-  return resultArray;
+  return results;
 };
 
-play(MAINQUESTION, getExpression);
+export default () => play(MAINQUESTION, getGameData);

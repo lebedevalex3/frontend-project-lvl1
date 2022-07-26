@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-import '../src/brain.js';
+import start from '../src/brain.js';
+
+start();

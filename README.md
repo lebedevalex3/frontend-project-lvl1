@@ -1,38 +1,49 @@
-## Игры разума
+## Серия консольных игр Brain Games
 
-**«Игры разума»** — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
+1. Склонируйте репозиторий `git clone https://github.com/lebedevalex3/frontend-project-lvl1.git`
+2. Для установки введите `make install `
 
-1. Калькулятор. Арифметические выражения, которые необходимо вычислить. _(brain-calc)_
-2. Прогрессия. Поиск пропущенных чисел в последовательности чисел. _(brain-progression)_
-3. Определение четного числа. _(brain-even)_
-4. Определение наибольшего общего делителя. _(brain-gcd)_
-5. Определение простого числа. _(brain-prime)_
+
+
 
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/lebedevalex3/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/lebedevalex3/frontend-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/8937730a066ea91a8214/maintainability)](https://codeclimate.com/github/lebedevalex3/frontend-project-lvl1/maintainability)
 
-### Code Climate
-
 <a href="https://codeclimate.com/github/lebedevalex3/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/8937730a066ea91a8214/test_coverage" /></a>
 
-### Brain-evens
+### Brain Even
+#### Игра: "Проверка на четность"
+`brain-even`
 
-[![asciicast](https://asciinema.org/a/eyd1ONWEBhDFTHLMwXKzYoKPg.svg)](https://asciinema.org/a/eyd1ONWEBhDFTHLMwXKzYoKPg)
+Пользователь видит случайное число. Нужно ответить **yes**, если число чётное, или **no** — если нечётное.
+[![asciicast](https://asciinema.org/a/S7UC8e49YsMf3fGTWXp5hfKxA.svg)](https://asciinema.org/a/S7UC8e49YsMf3fGTWXp5hfKxA)
 
-### Brain-calc
+### Brain Calc
+#### Игра: "Калькулятор"
+`brain-calc`
 
-[![asciicast](https://asciinema.org/a/0LRoQUbqfR5KpxHzxlDm8MYTJ.svg)](https://asciinema.org/a/0LRoQUbqfR5KpxHzxlDm8MYTJ)
+Пользователь видит случайное математическое выражение, например 53 - 12, которое нужно вычислить и записать правильный ответ.
+[![asciicast](https://asciinema.org/a/qZ2Fx5b3f2XtJXb0d1ZXScKEC.svg)](https://asciinema.org/a/qZ2Fx5b3f2XtJXb0d1ZXScKEC)
 
-### Brain-gcd
+### Brain GCD
+#### Игра "Наибольший общий делитель (НОД)"
+`brain-gcd`
 
-[![asciicast](https://asciinema.org/a/sNjG4athyn4jQBwXmwLhee83h.svg)](https://asciinema.org/a/sNjG4athyn4jQBwXmwLhee83h)
+Пользователь видит два случайных числа, например, 12 30. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+[![asciicast](https://asciinema.org/a/c2xKk63NHECr5H5CGrhUplZnI.svg)](https://asciinema.org/a/c2xKk63NHECr5H5CGrhUplZnI)
 
-### Brain-progression
+### Brain Progression
+#### Игра "Арифметическая прогрессия"
+`brain-progression`
 
-[![asciicast](https://asciinema.org/a/fL2bP9dbYgfdb5XD6Vz0xQJgF.svg)](https://asciinema.org/a/fL2bP9dbYgfdb5XD6Vz0xQJgF)
+Пользователь видит ряд чисел, образующий арифметическую прогрессию. Одно из чисел заменено двумя точками. Нужно определить это число.
+[![asciicast](https://asciinema.org/a/TLjQcLI7d04IkONxaNKS2sDTC.svg)](https://asciinema.org/a/TLjQcLI7d04IkONxaNKS2sDTC)
 
-### Brain-prime
+### Brain Prime
+#### Игра "Простое ли число?"
+`brain-prime`
 
-[![asciicast](https://asciinema.org/a/5erxwvOzNyhd0Uibzw29goFsW.svg)](https://asciinema.org/a/5erxwvOzNyhd0Uibzw29goFsW)
+Пользователь видит число. Нужно ответить **yes**, если число простое, или **no** — если нет.
+[![asciicast](https://asciinema.org/a/DPnbBs7sDTKQONi9MESf0xeyM.svg)](https://asciinema.org/a/DPnbBs7sDTKQONi9MESf0xeyM)
